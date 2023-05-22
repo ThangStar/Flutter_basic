@@ -1,9 +1,12 @@
 import 'package:first_app/screens/anime_screen.dart';
 import 'package:first_app/screens/api_mvc_screen.dart';
 import 'package:first_app/screens/api_user_screen.dart';
+import 'package:first_app/screens/counter_bloc_screen.dart';
 import 'package:first_app/screens/detail_screen.dart';
 import 'package:first_app/screens/drawer_tab_bar_screen.dart';
+import 'package:first_app/screens/getx_api_screen.dart';
 import 'package:first_app/screens/ui_course1.dart';
+import 'package:first_app/screens/ui_nested_scroll.dart';
 import 'package:flutter/material.dart';
 
 import 'login_screen.dart';
@@ -82,8 +85,31 @@ class HomeScreen extends StatelessWidget {
                       MaterialPageRoute(
                           builder: (context) => const DrawerAndTabBarScreen()));
                 },
-                child: const Text("Drawer and tab bar screen"))
-
+                child: const Text("Drawer and tab bar screen")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => GetXAPIScreen()));
+                },
+                child: const Text("GetX api screen")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NestedScrollUI()));
+                },
+                child: const Text("UI Nested scroll")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CounterBlocScreen()));
+                },
+                child: const Text("Counter bloc screen"))
           ],
         ),
       ),
